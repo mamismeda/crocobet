@@ -1,1 +1,7 @@
-<button *ngFor="let i of data" [routerLink]="['/pages/info/'+ i.id]" >{{i.name}}</button>
+<div class="container">
+  <div class="col-12 text-center">
+    <button *ngFor="let i of data" [routerLink]="['/pages/info/' + i.id]">
+      {{ i.name }}
+    </button>
+  </div>
+</div>

@@ -1,1 +1,43 @@
-<p>info works!</p>
+<div class="container pt-4">
+  <div class="row justify-content-between">
+    <p class="username mb-5" >{{userData?.name}}</p>
+    <div class="col-lg-4 mx-auto">
+        <img class="img-fluid mb-4" src="../../../assets/user.png" alt="user">
+    </div>
+    <div class="col-lg-4">
+        <ul>
+            <li> <span> Username :</span> {{userData?.username}}</li>
+            <li> <span> E-mail :</span> {{userData?.email}}</li>
+            <ul>
+                <li> <b>Address</b> </li>
+                <li> <span> Street :</span> {{userData?.address.street}}</li>
+                <li> <span> Suite :</span> {{userData?.address.suite}}</li>
+                <li> <span> city :</span> {{userData?.address.city}}</li>
+                <li> <span> Zipcode :</span> {{userData?.address.zipcode}}</li>
+            </ul>
+            <ul>
+                <li> <b>Geo</b> </li>
+                <li> <span> Lat :</span> {{userData?.address.geo.lat}}</li>
+                <li> <span> Lng :</span> {{userData?.address.geo.lng}}</li>
+            </ul>
+            <li> <span> Phone :</span> {{userData?.phone}}</li>
+            <li> <span> Website :</span> {{userData?.website}}</li>
+            <ul>
+                <li> <b>Company</b> </li>
+                <li> <span> Name :</span> {{userData?.company.name}}</li>
+                <li> <span> Catchphrase :</span> {{userData?.company.catchPhrase}}</li>
+                <li> <span> Bs :</span> {{userData?.company.bs}}</li>
+            </ul>
+        </ul>
+    </div>
+  </div>
+
+<div class="infos mb-3" *ngFor="let i of posts">
+    <p>{{i.userId}}</p>
+    <p>{{i.id}}</p>
+    <p>{{i.title}}</p>
+    <p>{{i.body}}</p>
+</div>
+
+<button (click)="gett()">Get Posts</button>
+</div>

@@ -5,10 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserlistComponent } from './userlist/userlist.component';
 import { InfoComponent } from './pages/info/info.component';
-import { PostsComponent } from './pages/posts/posts.component';
+
 
 @NgModule({
-  declarations: [AppComponent, UserlistComponent, InfoComponent, PostsComponent],
+  declarations: [AppComponent, UserlistComponent, InfoComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
